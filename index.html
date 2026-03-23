@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homie Roast Center</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <article class="panel headline">
+          <div class="eyebrow">Public Service Announcement</div>
+          <h1>
+            Homie:
+            <span class="accent">serving midnight delusion with premium packaging</span>
+          </h1>
+          <p class="lead">
+            Welcome to the internet's after-hours shade department for Homie, a
+            mysterious cloud of glam, nerve, and beautifully avoidable chaos
+            with the timing of a plot twist nobody requested.
+          </p>
+          <div class="actions">
+            <button class="primary" id="generate-roast">Generate Fresh Heat</button>
+            <a class="ghost-link" href="#scorecard">View Damage Report</a>
+          </div>
+        </article>
+
+        <aside class="panel spotlight">
+          <div class="spotlight-card">
+            <p class="eyebrow">Live Roast Feed</p>
+            <p class="big-quote" id="roast-output">
+              Homie can sweep in like a midnight reveal, miss every cue, and still stand there like the disaster is supposed to thank her for the atmosphere.
+            </p>
+            <div class="quote-meta">
+              <span id="roast-tag">Velvet Catastrophe</span>
+              <button class="ghost-link" id="copy-roast">Copy Roast</button>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="grid" id="scorecard">
+        <article class="panel card">
+          <h2>Performance Review</h2>
+          <div class="meter">
+            <div class="meter-row">
+              <span>Punctual excuses</span>
+              <div class="bar"><span style="width: 96%"></span></div>
+              <strong>96</strong>
+            </div>
+            <div class="meter-row">
+              <span>Unforced drama</span>
+              <div class="bar"><span style="width: 92%"></span></div>
+              <strong>92</strong>
+            </div>
+            <div class="meter-row">
+              <span>Main character delusion</span>
+              <div class="bar"><span style="width: 99%"></span></div>
+              <strong>99</strong>
+            </div>
+            <div class="meter-row">
+              <span>Consistent follow-through</span>
+              <div class="bar"><span style="width: 11%"></span></div>
+              <strong>11</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel card">
+          <h2>Observed Incidents</h2>
+          <div class="list">
+            <div class="list-item">Started speaking like a dark horse diva and finished like a deleted voice note clawing its way back.</div>
+            <div class="list-item">Treats deadlines like jealous exes who just cannot handle her glow in peace.</div>
+            <div class="list-item">Builds plans so fragile they smudge on contact like bargain mascara in bad weather.</div>
+          </div>
+        </article>
+
+        <article class="panel card">
+          <h2>Official Disclaimer</h2>
+          <div class="list">
+            <div class="list-item">This roast is for comedy, elegance, and the tasteful preservation of deeply dramatic nonsense.</div>
+            <div class="list-item">If you are Homie, personal growth remains on the menu even if the current look is giving ornamental collapse.</div>
+            <div class="list-item">No keyboards were harmed, but several adjectives requested witness protection.</div>
+          </div>
+        </article>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Breaking: Homie entered like a moonlit threat and left the room looking emotionally uninsured.</span>
+          <span>Alert: the confidence is flawless, the logic is missing, and the eyeliner has become the senior advisor.</span>
+          <span>Update: the vibe was rich, the planning was haunted, and the cleanup crew has filed for overtime.</span>
+          <span>Breaking: Homie entered like a moonlit threat and left the room looking emotionally uninsured.</span>
+          <span>Alert: the confidence is flawless, the logic is missing, and the eyeliner has become the senior advisor.</span>
+          <span>Update: the vibe was rich, the planning was haunted, and the cleanup crew has filed for overtime.</span>
+        </div>
+      </div>
+
+      <p class="footer-note">
+        Built with velvet darkness, expensive shade, and the kind of honesty Homie keeps trying to rebuke on aesthetic grounds.
+      </p>
+    </main>
+
+    <script>
+      const roasts = [
+        {
+          line: "Homie talks like every sentence deserves applause, then lands somewhere between a caption draft and a public wobble.",
+          tag: "Pageant Speech Malfunction",
+        },
+        {
+          line: "Homie has the energy of a makeover reveal where nobody told the mirror to cooperate.",
+          tag: "Contour Without Closure",
+        },
+        {
+          line: "If confidence were talent, Homie would own the runway and still trip over the entrance.",
+          tag: "Overbooked Ego",
+        },
+        {
+          line: "Homie moves like every decision was approved by three cousins, two mirrors, and one dangerous little impulse.",
+          tag: "Strategic Glitter Spill",
+        },
+        {
+          line: "Homie is what happens when pretty vibes get promoted six levels above preparation and handed a spotlight.",
+          tag: "Heat Warning",
+        },
+        {
+          line: "Homie dresses like every outfit began as a slay and ended as a committee compromise.",
+          tag: "Fabric Misconduct",
+        },
+        {
+          line: "Homie's plans have the structure of wet lashes in humidity and the staying power of cheap gloss.",
+          tag: "Scheduling Disaster",
+        },
+        {
+          line: "Homie has mastered the art of being beautifully wrong with the poise of someone who thinks eyeliner can replace evidence.",
+          tag: "Confidence Without Clearance",
+        },
+        {
+          line: "Homie brings diva authority to situations still begging for basic common sense and a backup plan.",
+          tag: "Promotion Pending Review",
+        },
+        {
+          line: "Homie treats preparation like bad lighting, then looks offended when reality catches the unfiltered angle.",
+          tag: "Avoidable Outcome",
+        },
+        {
+          line: "Homie can turn a simple plan into a season finale with the confidence of someone who has never met a quiet exit.",
+          tag: "Incident Report Pending",
+        },
+        {
+          line: "Homie shows up with finale energy and the practical value of a decorative zipper.",
+          tag: "Equipment Failure",
+        },
+        {
+          line: "Homie has the supernatural gift of making people regret asking the exact question they were kind enough to hand over.",
+          tag: "Volunteer Liability",
+        },
+        {
+          line: "If misplaced confidence were renewable energy, Homie could power the girls and still waste the entire grid.",
+          tag: "Grid Instability",
+        },
+        {
+          line: "Homie carries herself like couture even when the evidence is giving clearance rack at closing time.",
+          tag: "Museum Closed for Repairs",
+        },
+        {
+          line: "Homie enters every room like a secret worth keeping, then opens her mouth and turns it into a customer complaint.",
+          tag: "Mystique Refund Pending",
+        },
+        {
+          line: "She serves dramatic entrance, dramatic pause, dramatic confusion, and not one usable conclusion.",
+          tag: "Four-Course Delusion",
+        },
+        {
+          line: "Homie treats basic planning like an ugly accessory, which explains why every event around her arrives half-dressed.",
+          tag: "Coordination Blackout",
+        },
+        {
+          line: "Her confidence is so heavy-handed it walks into the room five minutes early and still forgets the assignment.",
+          tag: "Premature Grandness",
+        },
+        {
+          line: "Homie gives luxury energy until the details arrive and start testifying under oath.",
+          tag: "Cross-Examination Chic",
+        },
+        {
+          line: "She wears composure like borrowed diamonds: dazzling at first glance, deeply stressful up close.",
+          tag: "Rental Elegance",
+        },
+        {
+          line: "Homie can turn one tiny misunderstanding into a whole velvet season finale complete with side-eyes and no accountability.",
+          tag: "Serial Drama Renewal",
+        },
+        {
+          line: "She has the decision-making style of a glitter tornado in a dressing room with no adult supervision.",
+          tag: "Judgment Weather Advisory",
+        },
+        {
+          line: "Homie looks like she has a master plan right up until the first follow-up question walks in wearing heels.",
+          tag: "Interrogation in Satin",
+        },
+        {
+          line: "Her brand is expensive confusion finished with a glossy top coat and a deeply avoidable attitude.",
+          tag: "Luxury Malfunction",
+        },
+        {
+          line: "Homie talks about standards the way some people talk about cardio: often, vaguely, and mostly for appearance.",
+          tag: "Lifestyle Claims Department",
+        },
+        {
+          line: "She enters in full glam and exits in full contradiction.",
+          tag: "Continuity Error",
+        },
+        {
+          line: "Homie has perfected the soft smile of someone who is about to misunderstand the entire situation beautifully.",
+          tag: "Graceful Misfire",
+        },
+        {
+          line: "Her aura says femme fatale, but her execution says group assignment gone rogue.",
+          tag: "Noir Team Project",
+        },
+        {
+          line: "Homie keeps dressing like closure while behaving like the final unanswered text.",
+          tag: "Unread at Midnight",
+        },
+        {
+          line: "She makes every bad idea feel premium for twelve minutes, which is honestly a dangerous little talent.",
+          tag: "Deluxe Regret Package",
+        },
+        {
+          line: "Homie has the poise of a swan and the internal project management of a candle in the wind.",
+          tag: "Elegant Instability",
+        },
+        {
+          line: "The look says final boss, but the planning says she forgot which game she was in.",
+          tag: "Boss Fight Without Map",
+        },
+        {
+          line: "Homie can serve face, nerve, and beautifully lacquered nonsense all in one uninterrupted motion.",
+          tag: "Triple Threat to Clarity",
+        },
+        {
+          line: "She treats reality like a cheap fabric: pulls at it too hard, then acts shocked when the seam gives up.",
+          tag: "Material Failure",
+        },
+        {
+          line: "Homie carries every little mistake like it is part of the styling, which is bold because the mistakes keep multiplying.",
+          tag: "Accessory to Chaos",
+        },
+        {
+          line: "Her timing is immaculate if the goal is maximum disruption with minimum explanation.",
+          tag: "Precision Disturbance",
+        },
+        {
+          line: "Homie glides through consequences like they are paparazzi, then acts offended when one of them catches a clear angle.",
+          tag: "Flash Photography Incident",
+        },
+        {
+          line: "She gives femme mystery until the details arrive and reveal she is mostly decorative smoke with opinions.",
+          tag: "Fog Machine Leadership",
+        },
+        {
+          line: "Homie's confidence has a better skincare routine than her strategy ever will.",
+          tag: "Radiant but Unprepared",
+        },
+        {
+          line: "She has the exact energy of a dramatic black gown with one loose strap and a very ambitious story.",
+          tag: "Wardrobe Tension Arc",
+        },
+        {
+          line: "Homie treats every warning sign like it is just jealous lighting.",
+          tag: "Ignored Red Flags in Burgundy",
+        },
+        {
+          line: "She does not just miss the point, she arrives late, renames it, and expects applause for the rebrand.",
+          tag: "Concept Theft in Heels",
+        },
+        {
+          line: "Homie could make a simple apology sound like an acceptance speech for a category nobody created.",
+          tag: "Award for Outstanding Deflection",
+        },
+        {
+          line: "Her presence is unforgettable in the same way a lipstick stain on a white couch is unforgettable.",
+          tag: "Permanent Impression",
+        },
+      ];
+
+      const roastOutput = document.getElementById("roast-output");
+      const roastTag = document.getElementById("roast-tag");
+      const roastButton = document.getElementById("generate-roast");
+      const copyButton = document.getElementById("copy-roast");
+
+      function renderRoast() {
+        const next = roasts[Math.floor(Math.random() * roasts.length)];
+        roastOutput.textContent = next.line;
+        roastTag.textContent = next.tag;
+      }
+
+      roastButton.addEventListener("click", renderRoast);
+
+      copyButton.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(roastOutput.textContent);
+          copyButton.textContent = "Copied";
+          setTimeout(() => {
+            copyButton.textContent = "Copy Roast";
+          }, 1200);
+        } catch {
+          copyButton.textContent = "Clipboard blocked";
+          setTimeout(() => {
+            copyButton.textContent = "Copy Roast";
+          }, 1500);
+        }
+      });
+    </script>
+  </body>
+</html>
